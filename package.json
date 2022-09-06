@@ -1,0 +1,18 @@
+{
+  "name": "lenovate-development",
+  "description": "Leanovate development website generated with 11ty (eleventy)",
+  "author": "mat@daus.pt",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "dev": "npm-run-all --parallel dev:serve",
+    "build": "npm-run-all clean build:eleventy",
+    "dev:eleventy": "ELEVENTY_ENV=development npx @11ty/eleventy",
+    "dev:serve": "ELEVENTY_ENV=development npx @11ty/eleventy --watch --serve --port=8081",
+    "build:eleventy": "ELEVENTY_ENV=production npx @11ty/eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "npm-run-all": "^4.1.5"
+  }
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="{{ locale }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html">
+    <link rel="canonical" href="{{ site.baseUrl }}{{ permalink }}"/>
+    <meta name="description" content="{{ metaDescription }}">
+    <title>{{ site.name }} » {{ title }}</title>
+
+    <!-- open graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ metaDescription }}">
+    <meta property="og:image" content="{{ site.baseUrl }}{{ metaImage }}">
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{ site.twitter }}">
+    <meta name="twitter:title" content="{{ site.name }} » {{ title }}">
+    <meta name="twitter:description" content="{{ metaDescription }}">
+    <meta name="twitter:image" content="{{ site.baseUrl }}{{ metaImage }}">
+
+    <!-- icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{{site.iconPath}}/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{site.iconPath}}/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{site.iconPath}}/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{site.iconPath}}/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{site.iconPath}}/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{site.iconPath}}/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{site.iconPath}}/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{site.iconPath}}/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{site.iconPath}}/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="36x36"  href="{{site.iconPath}}/android-icon-36x36.png">
+    <link rel="icon" type="image/png" sizes="48x48"  href="{{site.iconPath}}/android-icon-48x48.png">
+    <link rel="icon" type="image/png" sizes="72x72"  href="{{site.iconPath}}/android-icon-72x72.png">
+    <link rel="icon" type="image/png" sizes="96x96"  href="{{site.iconPath}}/android-icon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{site.iconPath}}/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{site.iconPath}}/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{site.iconPath}}/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{site.iconPath}}/favicon-16x16.png">
+    <link rel="manifest" href="{{site.iconPath}}/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{site.iconPath}}/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/_assets/main.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Fira%20Code:wght@300..400&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Noto%20Sans:400,600,700&display=swap');
+      @font-face {
+        font-family: 'Roboto', sans-serif;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Fira Code', serif;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Noto Sans', sans-serif;
+        font-display: swap;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+      header
+    </header>
+
+    <main>
+      {% block main %}
+        {{ content | safe }}
+      {% endblock %}
+    </main>
+
+    <footer>
+      footer
+    </footer>
+
+  </body>
+</html>
