@@ -1,0 +1,63 @@
+// MEDIA QUERY MANAGER
+/*
+
+Breakpoint          Purpose
+--------------------------------------------------
+(default)           Mobile-portrait
+min-width: 480px    Mobile-landscape (and larger)
+min-width: 768px    Tablet-portrait (and larger)
+min-width: 992px    Tablet-landscape (and larger)
+min-width: 1200px   Laptops (and langer)
+*/
+
+// rem doesn't work properly, use pixels here
+$mobile-width: 480px;
+$text-block-width: 1024px;
+$pad-width: 768px;
+
+// small: upto 480px ($mobile-width)
+// middle: between 480px and 1024pz
+// wide: from 1024rpx $text-block-width
+
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == small {
+    @media only screen and (max-width: $mobile-width) {
+        // background-color: lightgoldenrodyellow;
+      @content;
+    }
+  }
+
+  @if $breakpoint == middle {
+    @media only screen and (min-width: $mobile-width) and (max-width: $text-block-width) {
+        // background-color: orange;
+      @content;
+    }
+  }
+  @if $breakpoint == pad-to-wide {
+    @media only screen and (min-width: $pad-width) and (max-width: $text-block-width) {
+        // background-color: orange;
+      @content;
+    }
+  }  
+  @if $breakpoint == small-to-middle {
+    @media only screen and (max-width: $text-block-width) {
+        // background-color: lightblue;
+      @content;
+    }
+  }
+
+  @if $breakpoint == middle-to-wide {
+    @media only screen and (min-width: $mobile-width) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == wide {
+    @media only screen and (min-width: $text-block-width + 1) {
+        // background-color: pink;
+      @content;
+    }
+  }
+ 
+}

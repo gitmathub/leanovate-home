@@ -1,0 +1,17 @@
+{# get the whole template #}
+{% macro get(collections, tags, partial, locale = "de") %}
+  {% for item in collections[tags] %}
+    {% if item.data.partial == partial and item.data.locale == locale%}
+      {{ item.templateContent | safe }}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+
+{# get only item from the front matter #}
+{% macro getValueForKey(collections, tags, partial, locale = "de", key = "") %}
+  {% for item in collections[tags] %}
+    {% if item.data.partial == partial and item.data.locale == locale%}
+      {{ item.data[key] | safe | trim }}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
