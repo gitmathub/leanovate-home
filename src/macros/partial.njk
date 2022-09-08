@@ -15,3 +15,17 @@
     {% endif %}
   {% endfor %}
 {% endmacro %}
+
+{#
+
+collections is an array of objec
+{ inputPath: './test1.md',
+  fileSlug: 'test1',
+  outputPath: './_site/test1/index.html',
+  url: '/test1/',
+  date: new Date(),
+  data: { title: 'Test Title', tags: ['tag1', 'tag2'], date: 'Last Modified' },
+  templateContent: '<h1>This is my title</h1>\n\n<p>This is content…'
+}
+{{collections[tags][1].inputPath}}
+#}

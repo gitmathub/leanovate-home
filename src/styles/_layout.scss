@@ -7,143 +7,196 @@
   box-sizing: inherit;
 }
 
+@font-face {
+  font-family: 'Notes Soft';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/assets/fonts/NotesSoftWeb-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Notes Soft';
+  font-weight: 400;
+  font-style: italic;
+  src: url('/assets/fonts/NotesSoftWeb-RegularIta.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Notes Soft';
+  font-weight: 500;
+  src: url('/assets/fonts/NotesSoftWeb-Bold.woff') format('woff');
+}
+
 html {
   // This defines 1rem = 10px; 10px/16px = 62.5%
   font-size: 62.5%;
   box-sizing: border-box;
+  background-color: white;
+  color: $color-grey-dark-3;
 }
 
-body,
-input,
-select,
-code,
-textarea {
-  font-family: $font-code;
+html[theme='dark'] {
+  background-color: #222222;
+  color: $color-grey-light-2;
+  a {
+    &:link,
+    &:visited {
+      color: $color-leanovate-blue-light;
+    }  
+    &:hover {
+      background-color: $color-grey-dark-2;
+    }
+    &:active {
+      background-color: $color-leanovate-blue;
+    }  
+  }
+}
+
+// OVERRIDE WITH DARK SCHEME
+// we can play with that, if we want to support 2 themes
+// this has to come AFTER the default
+// @media (prefers-color-scheme: light) {
+//   html {
+//     background-color: white;
+//   }
+// }
+
+body {
+  font-family: $font-sans-serif;
   font-size: $font-size-middle;
   font-weight: $font-weight-light;
   line-height: $line-height-middle;
-  color: $color-grey-dark-3;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  .h1,
-  .h2,
-  .h3,
-  .h4 {
-    font-family: $font-header;
-    text-align: center;
+
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+  font-family: $font-header;
+  // text-align: center;
+}
+
+strong {
+  font-weight: 500;
+}
+
+h1,
+.h1 {
+  font-size: $font-size-title-middle;
+  font-weight: $font-weight-title-middle;
+  margin: 3.2rem auto 2.8rem auto;
+}
+
+h2,
+.h2 {
+  font-size: $font-size-title-small;
+  font-weight: $font-weight-title-small;
+  margin: 2.8rem auto 2.1rem auto;
+}
+
+h3,
+.h3 {
+  font-size: $font-size-title-smaller;
+  font-weight: $font-weight-title-smaller;
+  margin: 2.1rem auto 1.6rem auto;
+}
+
+h4,
+.h4 {
+  font-weight: $font-weight-light;
+}
+
+@include respond(small) {
+  body {
+    font-size: $font-size-small;
+    font-weight: $font-weight-light;  
   }
 
   h1,
   .h1 {
-    font-size: $font-size-title-middle;
-    font-weight: $font-weight-title-middle;
-    margin: 3.2rem auto 2.8rem auto;
+    font-size: $font-size-title-small;
+    font-weight: $font-weight-title-small;
+    margin: 1.6rem auto 0.8rem auto;
   }
 
   h2,
   .h2 {
-    font-size: $font-size-title-small;
-    font-weight: $font-weight-title-small;
-    margin: 2.8rem auto 2.1rem auto;
+    font-size: $font-size-title-smaller;
+    font-weight: $font-weight-title-smaller;
+    margin: 1.6rem auto 0.8rem auto;
   }
 
   h3,
   .h3 {
-    font-size: $font-size-title-smaller;
-    font-weight: $font-weight-title-smaller;
-    margin: 2.1rem auto 1.6rem auto;
-  }
-
-  h4,
-  .h4 {
-    font-weight: $font-weight-light;
-  }
-
-  @include respond(small) {
-    font-size: $font-size-small;
-    font-weight: $font-weight-light;
-
-    h1,
-    .h1 {
-      font-size: $font-size-title-small;
-      font-weight: $font-weight-title-small;
-      margin: 1.6rem auto 0.8rem auto;
-    }
-
-    h2,
-    .h2 {
-      font-size: $font-size-title-smaller;
-      font-weight: $font-weight-title-smaller;
-      margin: 1.6rem auto 0.8rem auto;
-    }
-
-    h3,
-    .h3 {
-      font-size: $font-size-title-smallest;
-      font-weight: $font-weight-title-smallest;
-      margin: 1.2rem auto 0.8rem auto;
-    }
-  }
-
-  @include respond(wide) {
-    font-size: $font-size-wide;
-    font-weight: $font-weight-middle;
-
-    h1,
-    .h1 {
-      font-size: $font-size-title-wide;
-      font-weight: $font-weight-title-wide;
-    }
-
-    h2,
-    .h2 {
-      font-size: $font-size-title-middle;
-      font-weight: $font-weight-title-small;
-    }
-
-    h3,
-    .h3 {
-      font-size: $font-size-title-small;
-      font-weight: $font-weight-title-small;
-    }
-  }
-
-  p {
-    margin-bottom: 2.1rem;
-
-    @include respond(small) {
-      margin-bottom: 1.2rem;
-    }
-  }
-
-  // p:last-child {
-  //   margin-bottom: 0;
-  // }
-
-  ul,
-  ol {
-    margin-left: 2.8rem;
-  }
-
-  ul > li {
-    list-style: none;
-  }
-
-  ul > li:before {
-    display: inline-block;
-    content: "-";
-    width: 1.6rem;
-    margin-left: -1.6rem;
-    vertical-align: top;
-  }
-
-  ul > li:last-child {
-    margin-bottom: 2.8rem;
+    font-size: $font-size-title-smallest;
+    font-weight: $font-weight-title-smallest;
+    margin: 1.2rem auto 0.8rem auto;
   }
 }
+
+@include respond(wide) {
+  body {
+    font-size: $font-size-wide;
+    font-weight: $font-weight-middle;  
+  }
+
+  h1,
+  .h1 {
+    font-size: $font-size-title-wide;
+    font-weight: $font-weight-title-wide;
+  }
+
+  h2,
+  .h2 {
+    font-size: $font-size-title-middle;
+    font-weight: $font-weight-title-small;
+  }
+
+  h3,
+  .h3 {
+    font-size: $font-size-title-small;
+    font-weight: $font-weight-title-small;
+  }
+}
+
+p {
+  margin-bottom: 2.1rem;
+
+  @include respond(small) {
+    margin-bottom: 1.2rem;
+  }
+}
+
+// p:last-child {
+//   margin-bottom: 0;
+// }
+
+ul,
+ol {
+  margin-left: 2.8rem;
+}
+
+ul>li {
+  list-style: none;
+}
+
+ul>li:before {
+  display: inline-block;
+  content: "-";
+  width: 1.6rem;
+  margin-left: -1.6rem;
+  vertical-align: top;
+}
+
+ul>li:last-child {
+  margin-bottom: 2.8rem;
+}
+
 
 a {
   &:link,
@@ -151,18 +204,16 @@ a {
     display: inline;
     color: $color-grey-dark-3;
     // text-decoration: none;
-    font-weight: bolder;
+    // font-weight: bolder;
   }
-
   &:hover {
     background-color: $color-grey-light-2;
   }
+  &:active {
+    background-color: $color-leanovate-blue;
+  }
 }
 
-a.active {
-  // doesn't work above with &:active
-  background-color: $color-grey-light-2;
-}
 
 main,
 footer {

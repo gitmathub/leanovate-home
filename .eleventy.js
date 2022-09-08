@@ -1,7 +1,10 @@
+// const generateImages = require('./src/short-codes/images')
+
 module.exports = eleventyConfig => {
 
   eleventyConfig.addPassthroughCopy({
-    'src/assets': '_assets/',
+    'src/assets': 'assets/',
+    'src/images': 'images/',
   })
 
   // override annoying md code formatting
@@ -24,7 +27,8 @@ module.exports = eleventyConfig => {
     dir: {
       input: 'src',
       layouts: 'templates',
-      includes: 'macros'
+      includes: 'macros',
+      data: 'data',
     },
     passthroughFileCopy: true,
     templateFormats: ['njk', 'md', 'css', 'html'],

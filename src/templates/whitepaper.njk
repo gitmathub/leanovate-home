@@ -1,0 +1,28 @@
+---
+layout: main.njk
+theme: dark
+---
+
+{% import "partial.njk" as partial %}
+
+<section class="centered">
+
+  <h1 class="h3">{{ partial.getValueForKey(collections, tags, 'teaser', locale, 'white-paper')}}</h1>
+
+  {{ partial.get(collections, tags, "teaser", locale) }}
+
+  <img 
+    src="{{ partial.getValueForKey(collections, tags, 'teaser', locale, 'teaser-image')}}"
+    alt="teaser" class="centered">
+
+</section>
+
+<form class="form-wrapper centered">
+  <div class="form-group">
+  <label for="name">Name:</label><input type="text" name="name"/><br>
+  Email:<input type="text" name="email" /><br>
+  Unternehmen:<input/><br>
+  <input type="checkbox"/>
+  Ich habe die <a href="https://www.leanovate.de/datenschutz/">Privacy-Erklärung</a> nicht gelesen bin aber mit allem einverstanden, weil ich das verdammte Whitepaper haben möchte.<br>
+  <button name="senden" type="submit">
+</form>

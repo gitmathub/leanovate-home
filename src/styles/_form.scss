@@ -1,0 +1,131 @@
+.form-wrapper {
+  padding: 0;
+  font-weight: $font-weight-strong;
+
+  // background-color: lightblue;
+
+  @include respond(small) {
+    width: 100%;
+  }
+
+  @include respond(middle) {
+    width: 100%;
+  }
+
+  @include respond(wide) {
+    width: 80%;
+  }
+}
+
+
+.form-fields {
+  display: block;
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    // width: calc(100% - 200px);
+  }
+
+  input[type=checkbox] {
+    width: 1.6rem;
+    margin: 0.8rem;
+  }
+
+  input[type=submit] {
+    width: 20rem;
+    font-weight: $font-weight-strong;
+    font-size: larger;
+  }
+
+  sup {
+    margin: 0;
+    padding: 0;
+    color: $color-red;
+  }
+
+  button {
+    float: right;
+    padding: 0.8rem
+  }
+
+  &__hint {
+    font-size: smaller;
+    color: $color-grey-dark-2;
+    margin-top: 0.8rem;
+  }
+
+  &__two {
+    display: flex;
+  }
+
+  &__half {
+    width: 50%;
+  }
+
+  &__half:first-child {
+    // padding-right: 0.8rem
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 1.6rem 0 0 0;
+  }
+
+  @include respond(small) {
+    &__two {
+      display: block;
+    }
+
+    &__half {
+      width: 100%;
+    }
+
+    &__half:first-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.form-fields>div>label {
+  display: block;
+  margin: 1.2rem 0 0.2rem 0;
+}
+
+.form-fields>div>label.checkbox {
+  margin: 0;
+  font-weight: 300;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.form-group .validation-error {
+  color: $color-red;
+  font-size: smaller;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+}
+
+.form-group .form-control {
+  margin-bottom: 0;
+}
+
+.form-control.invalid {
+  border-color: $color-red;
+}
+
+.form-control:focus {
+  border-color: $color-grey-dark-2;
+}

@@ -1,10 +1,10 @@
 ---
-permalink: /de/entwicklung/index.html
-layout: development.njk
-tags: development
+permalink: /de/entwicklung/digitalisierung/index.html
+layout: whitepaper.njk
+tags: digitalization
 
 # max 35 characters
-title: "Produkt Software Entwicklung"
+title: "Whitepaper Digitalisierung"
 
 # max 158 characters
 metaDescription: "Ein komplettes Team entwickelt ihr Software Produkt | Digitalisierung | Skalierung | Refactoring | PDT"
