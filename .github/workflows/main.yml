@@ -31,9 +31,10 @@ jobs:
           echo test, and deploy your project.
 
       - name: ls -a via OPEN SSH Private Key
-        uses: ./
+        uses: invi5H/ssh-action@v1
         with:
-          command: ls -a
-          host: ${{ secrets.WEB_HOST }}
-          username: ${{ secrets.WEB_HOST_USER }}
-          privateKey: ${{ secrets.WEB_HOST_KEY }}
+          SSH_HOST: ${{ secrets.WEB_HOST }}
+          SSH_USER: ${{ secrets.WEB_HOST_USER }}
+          SSH_KEY: ${{ secrets.WEB_HOST_KEY }}
+      - run: ssh ${{ steps.ssh.outputs.SERVER }} ls -l        
+
