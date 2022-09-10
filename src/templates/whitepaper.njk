@@ -15,7 +15,8 @@ theme: dark
     src="{{ partial.getValueForKey(collections, tags, 'teaser', locale, 'teaser-image')}}"
     alt="teaser" class="centered">
 
-</section>
+
+<h3>{{ partial.getValueForKey(collections, tags, 'form', locale, 'headline') }}</h3>
 
 <form class="form-wrapper centered">
   <div class="form-group">
@@ -26,3 +27,5 @@ theme: dark
   Ich habe die <a href="https://www.leanovate.de/datenschutz/">Privacy-Erklärung</a> nicht gelesen bin aber mit allem einverstanden, weil ich das verdammte Whitepaper haben möchte.<br>
   <button name="senden" type="submit">
 </form>
+
+</section>
