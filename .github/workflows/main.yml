@@ -36,5 +36,5 @@ jobs:
           SSH_HOST: ${{ secrets.WEB_HOST }}
           SSH_USER: ${{ secrets.WEB_HOST_USER }}
           SSH_KEY: ${{ secrets.WEB_HOST_KEY }}
-      - run: ssh ${{ steps.ssh.outputs.SERVER }} ls -l        
+      - run: ssh ${{ steps.ssh.outputs.SERVER }} ls      
 
