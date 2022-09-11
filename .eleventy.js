@@ -20,12 +20,13 @@ module.exports = eleventyConfig => {
   })
 
   eleventyConfig.setBrowserSyncConfig({
-		files: './_site/css/**/*.css'
+		files: './dist/css/**/*.css'
 	})
 
   return {
     dir: {
       input: 'src',
+      output: 'dist',
       layouts: 'templates',
       includes: 'macros',
       data: 'data',

@@ -38,5 +38,11 @@ jobs:
           SSH_KEY: ${{ secrets.WEB_HOST_KEY }}
       
       - name: ls
-        run: ssh ${{ steps.ssh.outputs.SERVER }} ls      
-
+        # run: ssh ${{ steps.ssh.outputs.SERVER }} ls      
+        run: ssh ${{ steps.ssh.outputs.SERVER }} <<'ENDSSH'
+cd projects/leanovate-web/
+echo "git pull"
+git pull https://github.com/gitmathub/leanovate-web.git
+npm install
+npm run deploy:remote
+ENDSSH

@@ -4,14 +4,16 @@
   "author": "mat@daus.pt",
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf _site",
+    "clean": "rm -rf dist",
     "dev": "npm-run-all --parallel dev:serve watch:sass",
     "build": "npm-run-all clean build:*",
     "dev:eleventy": "ELEVENTY_ENV=development npx @11ty/eleventy",
     "dev:serve": "ELEVENTY_ENV=development npx @11ty/eleventy --watch --serve --port=8082",
-    "watch:sass": "npx sass src/styles:_site/css --watch",
+    "watch:sass": "npx sass src/styles:dist/css --watch",
     "build:eleventy": "ELEVENTY_ENV=production npx @11ty/eleventy",
-    "build:sass": "npx sass src/styles:_site/css"
+    "build:sass": "npx sass src/styles:dist/css",
+    "deploy": "echo 'do you mean deploy:remote?'",
+    "deploy:remote": "npm run build && sh /home/mountain/projects/leanovate-web/.bin/deploy.sh"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",

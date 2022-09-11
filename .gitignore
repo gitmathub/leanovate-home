@@ -3,5 +3,5 @@
 .config
 .env
 .htaccess
-_site/
+dist/
 node_modules/
