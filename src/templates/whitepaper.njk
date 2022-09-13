@@ -18,14 +18,6 @@ theme: dark
 
 <h3>{{ partial.getValueForKey(collections, tags, 'form', locale, 'headline') }}</h3>
 
-<form class="form-wrapper centered">
-  <div class="form-group">
-  <label for="name">Name:</label><input type="text" name="name"/><br>
-  Email:<input type="text" name="email" /><br>
-  Unternehmen:<input/><br>
-  <input type="checkbox"/>
-  Ich habe die <a href="https://www.leanovate.de/datenschutz/">Privacy-Erklärung</a> nicht gelesen bin aber mit allem einverstanden, weil ich das verdammte Whitepaper haben möchte.<br>
-  <button name="senden" type="submit">
-</form>
+{% include './form.njk' %}
 
 </section>
