@@ -1,0 +1,44 @@
+{# Load resources afer document.readState to improve page speed #}
+<script>
+  loadAfterDocumentReady = (callback) => {
+    if (document.readyState === 'complete') {
+      callback()
+    } else {
+      const listener = () => {
+        if (document.readyState === 'complete') {
+          callback()
+          document.removeEventListener('readystatechange', listener)
+        }
+      }
+      document.addEventListener('readystatechange', listener)
+    }
+  }
+
+  window.createScriptElement = (scripts, adjust) => {
+    scripts
+      .filter(script => !document.querySelector('script[src="' + script + '"]'))
+      .map(script => {
+        const scriptElement = document.createElement('script')
+        scriptElement.src = script
+        adjust && adjust(scriptElement)
+        document.head.append(scriptElement)
+      })
+  }
+</script>
+
+<script>
+  (function(){
+    {# const scripts = [
+    `https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.1/lazysizes.min.js`,
+    // `https://www.googletagmanager.com/gtag/js?id=AW-1071340456`,
+    // `${resourcersUrl}/_assets/scripts/google.js`,
+    `/assets/scripts/cookie-consent.min.js`,
+  ] #}
+
+    window.loadAfterDocumentReady(() => {
+      const s = window.createScriptElement
+
+      s(['{{ env.resourcesUrl }}/assets/scripts/lazyScripts.js'], e => e.type = "module")
+    })
+  })()
+</script>

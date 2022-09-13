@@ -1,4 +1,5 @@
 // const generateImages = require('./src/short-codes/images')
+const htmlmin = require('html-minifier')
 
 module.exports = eleventyConfig => {
 
@@ -15,6 +16,19 @@ module.exports = eleventyConfig => {
   // .use(require('markdown-it-github-headings'))
   eleventyConfig.setLibrary('md', markdownIt)
 
+  eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
+    if (outputPath.endsWith('.html')) {
+      return htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+        // continueOnParseError: true,
+        minifyJS: true
+      })
+    }
+    return content
+  })
+
   eleventyConfig.addFilter('json', (json, value = {}) => {
     return JSON.stringify(json || value)
   })
@@ -28,7 +42,7 @@ module.exports = eleventyConfig => {
       input: 'src',
       output: 'dist',
       layouts: 'templates',
-      includes: 'macros',
+      includes: 'utils',
       data: 'data',
     },
     passthroughFileCopy: true,

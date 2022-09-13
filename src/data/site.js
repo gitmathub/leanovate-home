@@ -4,6 +4,7 @@ module.exports = {
   iconPath: "/assets/icons/fav",
   name: "Leanovate",
   twitter: "@leanovate",
+  googleGtag: 'AW-xxx',
   languages: [
     {
       label: "deutsch",
