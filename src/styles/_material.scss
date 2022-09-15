@@ -1,0 +1,53 @@
+// has to come after _variables.scss
+$color-red: red;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #555;
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-leanovate-blue: #1e73be;
+$color-leanovate-blue-light: #8ed1fc;
+
+@use "@material/theme" with (
+  $primary: #1e73be, // $color-leanovate-blue
+  $secondary: #8ed1fc,
+  $background: green,
+  $surface: white,
+  $error: #b00020,
+  $on-primary: #fff,
+  $on-secondary: #fff,
+  $on-surface: $color-black, // text in input field
+  $on-error: #fff,
+);
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+
+:root {
+  --mdc-theme-text-primary-on-background: $color-red;
+  --mdc-theme-text-secondary-on-background: $color-red;
+  --mdc-theme-text-hint-on-background: $color-red;
+  --mdc-theme-text-disabled-on-background: $color-red;
+  --mdc-theme-text-icon-on-background: $color-red;
+  --mdc-theme-text-primary-on-light: $color-grey-dark-3;
+  --mdc-theme-text-secondary-on-light: $color-red;
+  --mdc-theme-text-hint-on-light: $color-red;
+  --mdc-theme-text-disabled-on-light: $color-red;
+  --mdc-theme-text-icon-on-light: $color-red;
+  --mdc-theme-text-primary-on-dark:$color-red;
+  --mdc-theme-text-secondary-on-dark: $color-red;
+  --mdc-theme-text-hint-on-dark: $color-red;
+  --mdc-theme-text-disabled-on-dark: $color-red;
+  --mdc-theme-text-icon-on-dark: $color-red;
+}
+
+
+
+@include textfield.core-styles;

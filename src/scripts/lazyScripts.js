@@ -1,1 +1,1 @@
-import('./material.js')
+import('../scripts/material')

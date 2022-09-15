@@ -18,8 +18,13 @@ Follow the [getting started](https://www.11ty.dev/docs/getting-started/) instruc
 - {{ collection['development][0] }} is the first item in the array
 - each 
 
+### Material
+
+- Github doc [textfield](https://github.com/material-components/material-components-web/tree/master/packages/mdc-textfield)
+- Material.io doc [textfield](https://material.io/components/text-fields/web#using-text-fields)
+
 ### Todos
 
 [ ] Create Fav Logo (incl. manifest.json)
-[ ] Add font Notes Soft
-
+[x] Add font Notes Soft
+[ ] 
