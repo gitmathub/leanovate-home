@@ -1,37 +1,26 @@
-.form-wrapper {
-  padding: 1.6rem;
-  font-weight: $font-weight-strong;
-
-  input[type=text],
-  input[type=email] {
-    background-color: $color-white;
-    padding: 0 1.6rem;
-    font-weight: $font-weight-strong;
-    font-size: x-large;
-  }
-
-
+.form-box {
+  padding: 3.2rem;
 
   label {
     width: 100%;
     padding: 0;
     margin: 0.8rem 0;
-
-    @include respond(small) {
-      width: 100%;
-    }
-
-    @include respond(middle) {
-      width: 100%;
-    }
-
-    @include respond(wide) {
-      width: 80%;
-    }
   }
-}
 
-.mdc-floating-label {
-  color: green;
-  font-size:medium;
+  .mdc-text-field--outlined .mdc-text-field__input {
+    // background-color: $color-grey-dark-1;
+    border: 0;
+  }
+  .mdc-floating-label {
+    font-size: small;
+  }
+  
+  .mdc-text-field__input {
+    padding: 0 1.6rem;
+    font-weight: $font-weight-strong;
+    // scale font
+    font-size: x-large;
+    font-family: $font-sans-serif;
+  }
+
 }

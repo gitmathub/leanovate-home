@@ -1,9 +1,9 @@
-<cookie-consent
-  scripts="https://www.googletagmanager.com/gtag/js?id={{site.googleGtag}}, /assets/scripts/google.js"
-  >
-  <div class="about">{{ translation[locale].aboutCookies | safe }}</div>
-  <div class="buttons">
-    <button data-action="accept">{{ translation[locale].acceptCookies }}</button>
-    <button data-action="reject">{{ translation[locale].rejectCookies }}</button>
-  </div>
-</cookie-consent>
+<div class="cookie-consent">
+  <cookie-consent scripts="https://www.googletagmanager.com/gtag/js?id={{site.googleGtag}}, /assets/scripts/google.js">
+    <div class="about">{{ translation[locale].aboutCookies | safe }}</div>
+    <div class="buttons">
+      <button data-action="accept">{{ translation[locale].acceptCookies }}</button>
+      <button data-action="reject">{{ translation[locale].rejectCookies }}</button>
+    </div>
+  </cookie-consent>
+</div>

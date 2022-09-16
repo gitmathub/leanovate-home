@@ -15,10 +15,10 @@ $color-leanovate-blue: #1e73be;
 $color-leanovate-blue-light: #8ed1fc;
 
 @use "@material/theme" with (
-  $primary: #1e73be, // $color-leanovate-blue
-  $secondary: #8ed1fc,
-  $background: green,
-  $surface: white,
+  $primary: $color-leanovate-blue, // $color-leanovate-blue
+  $secondary: $color-leanovate-blue-light,
+  $background: $color-black,
+  $surface: blue,
   $error: #b00020,
   $on-primary: #fff,
   $on-secondary: #fff,
@@ -30,24 +30,23 @@ $color-leanovate-blue-light: #8ed1fc;
 @use "@material/notched-outline/mdc-notched-outline";
 @use "@material/textfield";
 
-:root {
-  --mdc-theme-text-primary-on-background: $color-red;
-  --mdc-theme-text-secondary-on-background: $color-red;
-  --mdc-theme-text-hint-on-background: $color-red;
-  --mdc-theme-text-disabled-on-background: $color-red;
-  --mdc-theme-text-icon-on-background: $color-red;
-  --mdc-theme-text-primary-on-light: $color-grey-dark-3;
-  --mdc-theme-text-secondary-on-light: $color-red;
-  --mdc-theme-text-hint-on-light: $color-red;
-  --mdc-theme-text-disabled-on-light: $color-red;
-  --mdc-theme-text-icon-on-light: $color-red;
-  --mdc-theme-text-primary-on-dark:$color-red;
-  --mdc-theme-text-secondary-on-dark: $color-red;
-  --mdc-theme-text-hint-on-dark: $color-red;
-  --mdc-theme-text-disabled-on-dark: $color-red;
-  --mdc-theme-text-icon-on-dark: $color-red;
-}
-
-
+// :root {
+//   --mdc-theme-text-primary-on-background: $color-red;
+//   --mdc-theme-text-secondary-on-background: $color-red;
+//   --mdc-theme-text-hint-on-background: $color-red;
+//   --mdc-theme-text-disabled-on-background: $color-red;
+//   --mdc-theme-text-icon-on-background: $color-red;
+//   --mdc-theme-text-primary-on-light: $color-grey-dark-3;
+//   --mdc-theme-text-secondary-on-light: $color-red;
+//   --mdc-theme-text-hint-on-light: $color-red;
+//   --mdc-theme-text-disabled-on-light: $color-red;
+//   --mdc-theme-text-icon-on-light: $color-red;
+//   --mdc-theme-text-primary-on-dark:$color-red;
+//   --mdc-theme-text-secondary-on-dark: $color-red;
+//   --mdc-theme-text-hint-on-dark: $color-red;
+//   --mdc-theme-text-disabled-on-dark: $color-red;
+//   --mdc-theme-text-icon-on-dark: $color-red;
+// }
 
 @include textfield.core-styles;
+

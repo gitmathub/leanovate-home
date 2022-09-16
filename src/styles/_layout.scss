@@ -27,17 +27,32 @@
   src: url('/assets/fonts/NotesSoftWeb-Bold.woff') format('woff');
 }
 
+
+
 html {
   // This defines 1rem = 10px; 10px/16px = 62.5%
   font-size: 62.5%;
   box-sizing: border-box;
-  background-color: white;
+
+  background-color: $color-white;
   color: $color-grey-dark-3;
+  .form-box {
+    background-color: $color-white;
+  }
+  .mdc-text-field {
+    background-color: $color-white;
+  }  
 }
 
 html[theme='dark'] {
   background-color: #222222;
   color: $color-grey-light-2;
+  .form-box {
+    background-color: #ececec;
+  }
+  .mdc-text-field {
+    background-color: $color-white;
+  }
   a {
     &:link,
     &:visited {
