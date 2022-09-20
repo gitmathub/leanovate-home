@@ -25,6 +25,10 @@ Follow the [getting started](https://www.11ty.dev/docs/getting-started/) instruc
 
 ### Todos
 
+[ ] Connect form to backend
+[ ] Create footer
+[ ] Create header
+[ ] Create menu 
 [ ] Create Fav Logo (incl. manifest.json)
-[x] Add font Notes Soft
-[ ] 
+[ ] Translate to English
+

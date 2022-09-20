@@ -1,2 +1,2 @@
 
-<a href="./de/development/">Start Seite</a>
+<a href="./de/entwicklung/digitalisierung/">Start</a>

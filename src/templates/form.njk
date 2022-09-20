@@ -1,5 +1,11 @@
 <div class="form-box">
-  <form class="form-wrapper">
+  <form class="form-wrapper"
+    action="https://leanovate.daus.pt:41700/api/whitepaper-request/"
+    method="post">
+    {# <form action="http://localhost:3000/api/whitepaper-request" method="POST"> #}
+    {# TODO: put api key here #}
+    <input name="apiKey" type="text" value="1234" hidden/>
+    <input name="locale" type="text" value="{{ locale }}" hidden/>    
     <label class="mdc-text-field mdc-text-field--outlined">
       <span class="mdc-notched-outline">
         <span class="mdc-notched-outline__leading"></span>
