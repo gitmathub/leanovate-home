@@ -1,6 +1,6 @@
-// const generateImages = require('./src/short-codes/images')
+const generateImages = require('./src/short-codes/images')
 const htmlmin = require('html-minifier')
-
+let collectionAll = null
 module.exports = eleventyConfig => {
 
   eleventyConfig.addPassthroughCopy({
@@ -27,6 +27,33 @@ module.exports = eleventyConfig => {
       })
     }
     return content
+  })
+
+  eleventyConfig.addNunjucksAsyncShortcode('image', ({ src, alt, myClass }) => 
+    generateImages({ src, alt, myClass }))
+
+  
+  eleventyConfig.addCollection('myCollectionName', function(collectionApi) {
+    // get unsorted items
+    collectionAll = collectionApi.getAll()
+    return collectionApi.getAll();
+    
+  })
+
+  eleventyConfig.addNunjucksShortcode('partial', function(partialName) {
+    const path = this.page.filePathStem.substring(0, this.page.filePathStem.lastIndexOf("/"))
+    const filePathStem = `${path}/${partialName}`
+    const result = collectionAll.find(item => (item.filePathStem === filePathStem))
+    return result.templateContent
+  })
+
+
+
+  eleventyConfig.addCollection("keyMustExistInData", function(collectionApi) {
+    return collectionApi.getAll().filter(function(item) {
+      // Side-step tags and do your own filtering
+      return "myCustomDataKey" in item.data;
+    });
   })
 
   eleventyConfig.addFilter('json', (json, value = {}) => {

@@ -5,36 +5,41 @@
     {# <form action="http://localhost:3000/api/whitepaper-request" method="POST"> #}
     {# TODO: put api key here #}
     <input name="apiKey" type="text" value="1234" hidden/>
-    <input name="locale" type="text" value="{{ locale }}" hidden/>    
+    <input name="locale" type="text" value="{{ locale }}" hidden/>
+
     <label class="mdc-text-field mdc-text-field--outlined">
       <span class="mdc-notched-outline">
         <span class="mdc-notched-outline__leading"></span>
         <span class="mdc-notched-outline__notch">
-          <span class="mdc-floating-label" id="formName">Name</span>
+          <span class="mdc-floating-label" id="name">{{formName}}</span>
         </span>
         <span class="mdc-notched-outline__trailing"></span>
       </span>
-      <input type="text" class="mdc-text-field__input" aria-labelledby="formName">
+      <input name="name" type="text" class="mdc-text-field__input" aria-labelledby="name">
     </label>
+
     <label class="mdc-text-field mdc-text-field--outlined">
       <span class="mdc-notched-outline">
         <span class="mdc-notched-outline__leading"></span>
         <span class="mdc-notched-outline__notch">
-          <span class="mdc-floating-label" id="formEmail">Email</span>
+          <span class="mdc-floating-label" id="email">{{formEmail}}</span>
         </span>
         <span class="mdc-notched-outline__trailing"></span>
       </span>
-      <input type="email" class="mdc-text-field__input" aria-labelledby="formEmail">
+      <input name="email" type="email" class="mdc-text-field__input" aria-labelledby="email">
     </label>
+
     <label class="mdc-text-field mdc-text-field--outlined">
       <span class="mdc-notched-outline">
         <span class="mdc-notched-outline__leading"></span>
         <span class="mdc-notched-outline__notch">
-          <span class="mdc-floating-label" id="formCompany">Company</span>
+          <span class="mdc-floating-label" id="company">{{formCompany}}</span>
         </span>
         <span class="mdc-notched-outline__trailing"></span>
       </span>
-      <input type="text" class="input-company mdc-text-field__input" aria-labelledby="formCompany">
+      <input name="company" type="text" class="input-company mdc-text-field__input" aria-labelledby="company">
     </label>
+    
+    <input type="submit" name="{{formSubmit}}">
   </form>
 </div>

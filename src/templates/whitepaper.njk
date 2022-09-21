@@ -3,21 +3,12 @@ layout: main.njk
 theme: dark
 ---
 
-{% import "partial.njk" as partial %}
-
 <section class="centered">
-
-  <h1 class="h3">{{ partial.getValueForKey(collections, tags, 'teaser', locale, 'white-paper')}}</h1>
-
-  {{ partial.get(collections, tags, "teaser", locale) }}
-
-  <img 
-    src="{{ partial.getValueForKey(collections, tags, 'teaser', locale, 'teaser-image')}}"
-    alt="teaser" class="centered">
-
-
-<h3>{{ partial.getValueForKey(collections, tags, 'form', locale, 'headline') }}</h3>
-
-{% include './form.njk' %}
-
+  <h1 class="h3">{{ whitePaper }}</h1>
+  {% partial 'teaser' %}
+  <img src="{{ teaserImageSrc }}" alt="{{teaserImageAlt}}" class="main-image">
+  <h3>{{ formHeadline }}</h3>
+  {% include './form.njk' %}
 </section>
+
+{# {% image {src: teaserImageSrc, alt:teaserImageAlt, myClass: "main-image"} %} #}

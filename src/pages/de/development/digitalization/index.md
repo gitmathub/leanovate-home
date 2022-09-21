@@ -10,5 +10,17 @@ title: "Whitepaper Digitalisierung"
 metaDescription: "Ein komplettes Team entwickelt ihr Software Produkt | Digitalisierung | Skalierung | Refactoring | PDT"
 # relative path. example: "/_assets/surfschool/hero-surfschool.jpg"
 metaImage: "/_assets/"
+
+
+whitePaper: 'Whitepaper: Digitalisierung. 5 Marksteine für Führungskräfte'
+teaserImageSrc: /images/change-happens.jpg
+teaserImageAlt: Change happens
+
+# form
+formHeadline: Whitepaper Download
+formName: Name
+formEmail: Email
+formCompany: Firma
+formSubmit: Whitepaper anfordern
 ---
 

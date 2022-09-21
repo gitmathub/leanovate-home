@@ -18,8 +18,8 @@ async function generateImages({
   const metadata = await Image(_src, {
     widths: [230, 300, 350, 480, 768, 1024, 2048],
     formats: ['jpeg'],
-    urlPath: "/_assets/images/",
-    outputDir: "./dist/_assets/images",
+    urlPath: "/assets/images/",
+    outputDir: "./dist/assets/images",
     filenameFormat: (id, _src, width, format, options) => `${filename}-${width}-${id}.${format}`
   });
   

@@ -25,7 +25,9 @@ Follow the [getting started](https://www.11ty.dev/docs/getting-started/) instruc
 
 ### Todos
 
-[ ] Connect form to backend
+[X] Connect form to backend
+[ ] Finish form
+[ ] 
 [ ] Create footer
 [ ] Create header
 [ ] Create menu 
