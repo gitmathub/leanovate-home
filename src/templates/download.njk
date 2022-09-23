@@ -1,0 +1,37 @@
+---
+layout: mail.njk
+theme: dark
+---
+
+<style>
+  h1 {
+    font-size: 42px;
+    font-weight: 300;
+  }
+  h2 {
+    font-size: 32px;
+    font-weight: 300;
+  }
+  button {
+    background-color: #1e73be;
+    color: white;
+    text-transform: uppercase;
+    height: 36px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 4px;
+    margin: 30px;
+  }
+</style>
+<section class="centered" style="text-align: center;">
+  <h2>{{ whitePaper }}</h2>
+  <h1>{{ whitePaperTitle }}</h1>
+  {% partial 'download' %}
+
+  <a href="{{ env.resourcersUrl }}/{{ downloadPath }}/{{ whitePaperFileName }}" style="text-decoration: none">
+    <button type="button">
+      <span class="mdc-button__label">{{ downLoadButton }}</span>
+    </button>
+  </a>
+
+</section>

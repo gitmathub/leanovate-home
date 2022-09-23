@@ -5,4 +5,9 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  &__blue-headline {
+    color: $color-leanovate-blue;
+    margin-top: 0;
+  }
 }

@@ -23,7 +23,8 @@ module.exports = eleventyConfig => {
         removeComments: true,
         collapseWhitespace: true,
         // continueOnParseError: true,
-        minifyJS: true
+        minifyJS: true,
+        minifyCSS: true
       })
     }
     return content
@@ -46,8 +47,6 @@ module.exports = eleventyConfig => {
     const result = collectionAll.find(item => (item.filePathStem === filePathStem))
     return result?.templateContent || ''
   })
-
-
 
   eleventyConfig.addCollection("keyMustExistInData", function(collectionApi) {
     return collectionApi.getAll().filter(function(item) {

@@ -18,7 +18,8 @@ metaImage: "/_assets/"
 whitePaper: Whitepaper
 downLoadButton: Download
 whitePaperTitle: Digitalisierung vs. Digitale Transformation
-teaserImageSrc: /images/change-happens.jpg
+# teaserImageSrc: /images/change-happens.jpg
+teaserImageSrc: /images/start-finishing.jpg
 teaserImageAlt: Change happens
 
 # form

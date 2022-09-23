@@ -50,3 +50,4 @@ Con
 [ ] Create Fav Logo (incl. manifest.json)
 [ ] Translate to English
 [X] Connect form to backend
+[ ] Make confirmation and download page generic
