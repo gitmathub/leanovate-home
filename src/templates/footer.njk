@@ -1,16 +1,16 @@
-<div class="cookie-consent">
-  <cookie-consent scripts="https://www.googletagmanager.com/gtag/js?id={{site.googleGtag}}, /assets/scripts/google.js">
-    <div class="about">{{ translation[locale].aboutCookies | safe }}</div>
-    <div class="buttons">
-      <button data-action="accept" class="mdc-button mdc-button--raised">
-        <span class="mdc-button__label">{{translation[locale].acceptCookies}}</span>
-      </button>
-      <button data-action="reject" class="mdc-button mdc-button--raised">
-        <span class="mdc-button__label">{{translation[locale].rejectCookies}}</span>
-      </button>
-    </div>
-  </cookie-consent>
-</div>
+<cookie-consent class="cookie-consent">
+  {# <cookie-consent class="cookie-consent" scripts="https://www.googletagmanager.com/gtag/js?id={{site.googleGtag}}, /assets/scripts/google.js"> #}
+  <div class="about">{{ translation[locale].aboutCookies | safe }}</div>
+
+  <div class="buttons">
+    <button data-action="accept" class="mdc-button mdc-button--raised">
+      <span class="mdc-button__label">{{translation[locale].acceptCookies}}</span>
+    </button>
+    <button data-action="reject" class="mdc-button mdc-button--raised">
+      <span class="mdc-button__label">{{translation[locale].rejectCookies}}</span>
+    </button>
+  </div>
+</cookie-consent>
 {# <nav>
   <img src="https://leanovate.de/wp-content/uploads/leanovate-logo.png" class="ct-image" width="184" height="105">
   <div>

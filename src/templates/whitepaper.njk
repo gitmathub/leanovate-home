@@ -15,7 +15,8 @@ theme: dark
   <h1>{{ whitePaperTitle }}</h1>
   {% partial 'teaser' %}
   <img src="{{ teaserImageSrc }}" alt="{{ teaserImageAlt }}" class="main-image">
-    <h3 id="whitepaper-download">{{ formHeadline }}</h3>
-    {% include './form.njk' %}
-  </section>
+  <h3 id="whitepaper-download">{{ formHeadline }}</h3>
+  {% include './form.njk' %}
+</section>
+
   {# {% image {src: teaserImageSrc, alt:teaserImageAlt, myClass: "main-image"} %} #}

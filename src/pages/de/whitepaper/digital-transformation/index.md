@@ -12,6 +12,9 @@ metaDescription: "Ein komplettes Team entwickelt ihr Software Produkt | Digitali
 metaImage: "/_assets/"
 
 
+#
+# page content keys
+#
 whitePaper: Whitepaper
 downLoadButton: Download
 whitePaperTitle: Digitalisierung vs. Digitale Transformation

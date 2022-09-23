@@ -44,7 +44,7 @@ module.exports = eleventyConfig => {
     const path = this.page.filePathStem.substring(0, this.page.filePathStem.lastIndexOf("/"))
     const filePathStem = `${path}/${partialName}`
     const result = collectionAll.find(item => (item.filePathStem === filePathStem))
-    return result.templateContent
+    return result?.templateContent || ''
   })
 
 

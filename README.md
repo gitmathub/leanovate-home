@@ -40,7 +40,8 @@ Con
 
 [x] Finish form: Material button
 [ ] Create Answering Page
-[ ] Check form
+[ ] Fix cookie clicks
+[ ] Validate form
 [ ] Send asynchronly?
 [ ] Create footer
 [ ] Create header
