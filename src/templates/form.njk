@@ -1,12 +1,7 @@
 <div class="form-box">
-  <form class="form-wrapper"
-    action="https://leanovate.daus.pt:41700/api/whitepaper-request/"
-    method="post">
-    {# <form action="http://localhost:3000/api/whitepaper-request" method="POST"> #}
-    {# TODO: put api key here #}
+  <form class="form-wrapper" action="https://leanovate.daus.pt:41700/api/whitepaper-request/" method="post">
     <input name="apiKey" type="text" value="1234" hidden/>
     <input name="locale" type="text" value="{{ locale }}" hidden/>
-
     <label class="mdc-text-field mdc-text-field--outlined">
       <span class="mdc-notched-outline">
         <span class="mdc-notched-outline__leading"></span>
@@ -17,7 +12,6 @@
       </span>
       <input name="name" type="text" class="mdc-text-field__input" aria-labelledby="name">
     </label>
-
     <label class="mdc-text-field mdc-text-field--outlined">
       <span class="mdc-notched-outline">
         <span class="mdc-notched-outline__leading"></span>
@@ -28,7 +22,6 @@
       </span>
       <input name="email" type="email" class="mdc-text-field__input" aria-labelledby="email">
     </label>
-
     <label class="mdc-text-field mdc-text-field--outlined">
       <span class="mdc-notched-outline">
         <span class="mdc-notched-outline__leading"></span>
@@ -37,9 +30,23 @@
         </span>
         <span class="mdc-notched-outline__trailing"></span>
       </span>
-      <input name="company" type="text" class="input-company mdc-text-field__input" aria-labelledby="company">
+      <input name="company" type="text" class="mdc-text-field__input" aria-labelledby="company">
     </label>
-    
-    <input type="submit" name="{{formSubmit}}">
+    <label class="mdc-text-field mdc-text-field--outlined">
+      <span class="mdc-notched-outline">
+        <span class="mdc-notched-outline__leading"></span>
+        <span class="mdc-notched-outline__notch">
+          <span class="mdc-floating-label" id="position">{{formPosition}}</span>
+        </span>
+        <span class="mdc-notched-outline__trailing"></span>
+      </span>
+      <input name="position" type="text" class="mdc-text-field__input" aria-labelledby="position">
+    </label>
+    {# Checkbox: Privacy Policy #}
+    <div class="form-box__button">
+      <button class="mdc-button mdc-button--raised">
+        <span class="mdc-button__label">{{formSubmit}}</span>
+      </button>
+    </div>
   </form>
 </div>

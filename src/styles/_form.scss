@@ -23,4 +23,8 @@
     font-family: $font-sans-serif;
   }
 
+  &__button {
+    padding: 0.8rem 0;
+    text-align: end;
+  }
 }

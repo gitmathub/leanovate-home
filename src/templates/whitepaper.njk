@@ -4,11 +4,18 @@ theme: dark
 ---
 
 <section class="centered">
-  <h1 class="h3">{{ whitePaper }}</h1>
+  <div class="whitepaper__headline-button">
+    <h2 style="margin:0">{{ whitePaper }}</h2>
+    <a href="#whitepaper-download" style="text-decoration: none">
+      <button type="button" class="mdc-button mdc-button--raised">
+        <span class="mdc-button__label">{{ downLoadButton }}</span>
+      </button>
+    </a>
+  </div>
+  <h1>{{ whitePaperTitle }}</h1>
   {% partial 'teaser' %}
-  <img src="{{ teaserImageSrc }}" alt="{{teaserImageAlt}}" class="main-image">
-  <h3>{{ formHeadline }}</h3>
-  {% include './form.njk' %}
-</section>
-
-{# {% image {src: teaserImageSrc, alt:teaserImageAlt, myClass: "main-image"} %} #}
+  <img src="{{ teaserImageSrc }}" alt="{{ teaserImageAlt }}" class="main-image">
+    <h3 id="whitepaper-download">{{ formHeadline }}</h3>
+    {% include './form.njk' %}
+  </section>
+  {# {% image {src: teaserImageSrc, alt:teaserImageAlt, myClass: "main-image"} %} #}

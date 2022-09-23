@@ -1,6 +1,13 @@
-# Leanovate Homepage
+# Leanovate Web
 
-This is a test baloon. A Section of the homepage will be created by a sitegenerator.
+This is a test baloon for evaluating 11ty as sitegenerator for landing pages.
+
+- [Leanovate Web](#leanovate-web)
+  - [Dev](#dev)
+    - [Installation](#installation)
+    - [Material](#material)
+    - [Material](#material-1)
+    - [Todos](#todos)
 
 
 ## Dev
@@ -8,29 +15,37 @@ This is a test baloon. A Section of the homepage will be created by a sitegenera
 
 Follow the [getting started](https://www.11ty.dev/docs/getting-started/) instructions.
 
-### Collections
+### Material
 
-```njk
-{{collections[tags]}}
-```
-- collections are all templates
-- collections['development'] is an array of page partials that have the *tag* `development` in the front matter (`tags: development`).
-- {{ collection['development][0] }} is the first item in the array
-- each 
+The form fields are made with Material web components.
+
+Pro
+  - look and feel as Google and Android users know it
+  - animations make is more "fancy"
+Con
+  - overriding styles is difficult
+  - bigger footprint (loading)
+  - external dependencies
+  - look and feel constrained (can be a pro, see above)
 
 ### Material
 
 - Github doc [textfield](https://github.com/material-components/material-components-web/tree/master/packages/mdc-textfield)
 - Material.io doc [textfield](https://material.io/components/text-fields/web#using-text-fields)
 
+- Material.io doc [buttons](https://material.io/components/buttons/web#using-buttons)
+
 ### Todos
 
-[X] Connect form to backend
-[ ] Finish form
-[ ] 
+
+[x] Finish form: Material button
+[ ] Create Answering Page
+[ ] Check form
+[ ] Send asynchronly?
 [ ] Create footer
 [ ] Create header
-[ ] Create menu 
+[ ] Create menu
+[ ] Fix responsive image loading
 [ ] Create Fav Logo (incl. manifest.json)
 [ ] Translate to English
-
+[X] Connect form to backend

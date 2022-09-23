@@ -2,12 +2,15 @@
   <cookie-consent scripts="https://www.googletagmanager.com/gtag/js?id={{site.googleGtag}}, /assets/scripts/google.js">
     <div class="about">{{ translation[locale].aboutCookies | safe }}</div>
     <div class="buttons">
-      <button data-action="accept">{{ translation[locale].acceptCookies }}</button>
-      <button data-action="reject">{{ translation[locale].rejectCookies }}</button>
+      <button data-action="accept" class="mdc-button mdc-button--raised">
+        <span class="mdc-button__label">{{translation[locale].acceptCookies}}</span>
+      </button>
+      <button data-action="reject" class="mdc-button mdc-button--raised">
+        <span class="mdc-button__label">{{translation[locale].rejectCookies}}</span>
+      </button>
     </div>
   </cookie-consent>
 </div>
-
 {# <nav>
   <img src="https://leanovate.de/wp-content/uploads/leanovate-logo.png" class="ct-image" width="184" height="105">
   <div>
@@ -73,4 +76,4 @@
     <li><a href="/datenschutz">Datenschutz</a></li>
   </ul>
 </nav> #}
-<div>Made with 	💙	in Berlin. © leanovate 2022</div>
+<div class="centered-text">Made with 	💙	in Berlin. © leanovate 2022</div>

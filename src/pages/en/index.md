@@ -1,4 +1,4 @@
 ---
-permalink: /de/index.html
+permalink: /en/index.html
 ---
 [This way](/de/whitepaper/digital-transformation)

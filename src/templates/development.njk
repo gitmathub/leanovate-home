@@ -1,10 +1,9 @@
 ---
 layout: main.njk
-
+theme: dark
 ---
 
-{% import "partial.njk" as partial %}
-
 <section class="centered">
-  {{ partial.get(collections, tags, "start", locale) }}
+  {% partial 'start'%}
+  {# {{ partial.get(collections, tags, "start", locale) }} #}
 </section>

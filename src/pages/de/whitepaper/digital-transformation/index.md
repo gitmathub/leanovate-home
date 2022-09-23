@@ -1,5 +1,5 @@
 ---
-permalink: /de/entwicklung/digitalisierung/index.html
+permalink: /de/whitepaper/digital-transformation/index.html
 layout: whitepaper.njk
 tags: digitalization
 
@@ -12,7 +12,9 @@ metaDescription: "Ein komplettes Team entwickelt ihr Software Produkt | Digitali
 metaImage: "/_assets/"
 
 
-whitePaper: 'Whitepaper: Digitalisierung. 5 Marksteine für Führungskräfte'
+whitePaper: Whitepaper
+downLoadButton: Download
+whitePaperTitle: Digitalisierung vs. Digitale Transformation
 teaserImageSrc: /images/change-happens.jpg
 teaserImageAlt: Change happens
 
@@ -20,7 +22,8 @@ teaserImageAlt: Change happens
 formHeadline: Whitepaper Download
 formName: Name
 formEmail: Email
-formCompany: Firma
-formSubmit: Whitepaper anfordern
+formCompany: Unternehmen
+formPosition: Position im Unternehmen
+formSubmit: Senden
 ---
 
