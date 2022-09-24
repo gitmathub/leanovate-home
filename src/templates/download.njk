@@ -4,13 +4,22 @@ theme: dark
 ---
 
 <style>
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
   h1 {
     font-size: 42px;
     font-weight: 300;
+    margin: 3.2rem auto 2.8rem auto;
   }
   h2 {
     font-size: 32px;
     font-weight: 300;
+    margin: 2.8rem auto 2.1rem auto;
   }
   button {
     background-color: #1e73be;
@@ -27,11 +36,9 @@ theme: dark
   <h2>{{ whitePaper }}</h2>
   <h1>{{ whitePaperTitle }}</h1>
   {% partial 'download' %}
-
-  <a href="{{ env.resourcersUrl }}/{{ downloadPath }}/{{ whitePaperFileName }}" style="text-decoration: none">
+  <a href="{{ env.resourcesUrl }}/{{ downloadPath }}/{{ whitePaperFileName }}" style="text-decoration: none">
     <button type="button">
-      <span class="mdc-button__label">{{ downLoadButton }}</span>
+      <span>{{ downLoadButton }}</span>
     </button>
   </a>
-
 </section>

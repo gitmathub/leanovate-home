@@ -15,8 +15,7 @@
     <title>{{ site.name }} » {{ title }}</title>
   </head>
   <body style=" background-color: #222222; color: #eee; font-family: 'Notes Soft', sans-serif; font-size: 18px;">
-    <img src="/assets/logos/leanovate.jpg" class="logo" alt="leanovate">
-    {{ content | safe }}
-    <div style="text-align:center; padding:30px">Made with 	💙	in Berlin. © leanovate 2022</div>
+    <img src="{{env.resourcesUrl}}/assets/logos/leanovate.jpg" class="logo" alt="leanovate"> {{ content | safe }}
+    <div style="text-align:center; padding:30px">Made with 💙 in Berlin. © leanovate 2022</div>
   </body>
 </html>

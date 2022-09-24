@@ -39,10 +39,11 @@ Con
 
 
 [x] Finish form: Material button
-[ ] Create Answering Page
+[x] Create Answering Page
 [ ] Fix cookie clicks
-[ ] Validate form
-[ ] Send asynchronly?
+[x] Validate form
+[ ] Send asynchronly
+[ ] Handle errors while sending
 [ ] Create footer
 [ ] Create header
 [ ] Create menu

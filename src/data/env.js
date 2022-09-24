@@ -5,5 +5,5 @@ if (!process.env[`RESOURCES_URL`]) {
 }
 
 module.exports = {
-  resourcersUrl: process.env[`RESOURCES_URL`]
+  resourcesUrl: process.env[`RESOURCES_URL`]
 }
