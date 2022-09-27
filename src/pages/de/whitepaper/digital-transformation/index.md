@@ -19,7 +19,7 @@ whitePaper: Whitepaper
 downLoadButton: Download
 whitePaperTitle: Digitalisierung vs. Digitale Transformation
 # teaserImageSrc: /images/change-happens.jpg
-teaserImageSrc: /images/start-finishing.jpg
+teaserImageSrc: /images/nice-code.jpg
 teaserImageAlt: Change happens
 
 # form
