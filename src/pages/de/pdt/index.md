@@ -1,6 +1,6 @@
 ---
-permalink: /de/product-development-team/index.html
-layout: whitepaper.njk
+permalink: /de/produkt-entwicklung-team/index.html
+layout: pdt.njk
 tags: pdt
 
 # max 35 characters
