@@ -1,5 +1,4 @@
 .pdt {
-
   @import url(//fonts.google.com/download?family=Neuton);
   @import url(//fonts.google.com/download?family=Special%20Elite);
 
@@ -7,26 +6,29 @@
     font-size: 52px;
     line-height: 52px;
     font-family: 'Neuton', serif;
+    margin-top: 6rem;
     // color: $color-leanovate-blue-light;
 
     em {
       font-family: 'Neuton', serif;
       white-space: nowrap;
-      color: $color-white;
     }
   }
 
-
+  h3 {
+    color: $color-leanovate-orange
+  }
 
   p {
-    max-width: 700px;
+    width: 100%;
     font-size: larger;
-    color: rgba(213, 213, 213, 0.887);
-    margin-left: 20%;
-    text-overflow: no;
-    em {
-      color: orange;
-    }
+    // color: rgba(213, 213, 213, 0.887);
+    padding-left: 20%;
+  }
+
+  img {
+    margin: 1.6rem 0;
+    max-width: $text-block-width;
   }
 
 }

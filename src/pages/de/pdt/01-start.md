@@ -2,6 +2,9 @@
 tags: pdt
 ---
 
-*„Leanovate ist unbequem und angenehm erfolgsführend!“*
-
 ## Product Development Team
+
+<style>   
+    color: orange
+</style>
+### „Leanovate ist unbequem und angenehm erfolgsführend!“

@@ -40,11 +40,18 @@ html {
   .mdc-text-field {
     background-color: $color-white;
   }  
+  em {
+    color: $color-leanovate-blue;
+  }  
 }
 
 html[theme='dark'] {
-  background-color: #222222;
-  color: $color-grey-light-2;
+  // background-color: #222222;
+  background-color: #1B1B1B;
+  color: $color-grey-dark-1;
+  h1, h2, h4 {
+    color: $color-white;
+  }
   .form-box {
     background-color: #ececec;
   }
@@ -63,6 +70,9 @@ html[theme='dark'] {
       background-color: $color-leanovate-blue;
     }  
   }
+  em {
+    color: orange;
+  }  
 }
 
 // OVERRIDE WITH DARK SCHEME
