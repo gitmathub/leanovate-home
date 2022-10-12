@@ -25,29 +25,24 @@ $color-leanovate-blue-light: #8ed1fc;
   $on-surface: $color-black, // text in input field
   $on-error: #fff,
 );
+
+// text field
 @use "@material/floating-label/mdc-floating-label";
 @use "@material/line-ripple/mdc-line-ripple";
 @use "@material/notched-outline/mdc-notched-outline";
 @use "@material/textfield";
+
+// button
 @use "@material/button/styles";
 
-// :root {
-//   --mdc-theme-text-primary-on-background: $color-red;
-//   --mdc-theme-text-secondary-on-background: $color-red;
-//   --mdc-theme-text-hint-on-background: $color-red;
-//   --mdc-theme-text-disabled-on-background: $color-red;
-//   --mdc-theme-text-icon-on-background: $color-red;
-//   --mdc-theme-text-primary-on-light: $color-grey-dark-3;
-//   --mdc-theme-text-secondary-on-light: $color-red;
-//   --mdc-theme-text-hint-on-light: $color-red;
-//   --mdc-theme-text-disabled-on-light: $color-red;
-//   --mdc-theme-text-icon-on-light: $color-red;
-//   --mdc-theme-text-primary-on-dark:$color-red;
-//   --mdc-theme-text-secondary-on-dark: $color-red;
-//   --mdc-theme-text-hint-on-dark: $color-red;
-//   --mdc-theme-text-disabled-on-dark: $color-red;
-//   --mdc-theme-text-icon-on-dark: $color-red;
-// }
+// checkbox
+@use "@material/checkbox";
+@use "@material/form-field";
 
+// textfield
 @include textfield.core-styles;
+
+// checkbox
+@include checkbox.core-styles;
+@include form-field.core-styles;
 

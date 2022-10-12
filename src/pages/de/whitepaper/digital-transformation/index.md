@@ -28,6 +28,7 @@ formName: Name
 formEmail: Email
 formCompany: Unternehmen
 formPosition: Position im Unternehmen
+formDataPolicy: Ich habe die [Datenschutzerklärung](https://www.leanovate.de/datenschutz/datenschutzerklaerung/) gelesen und stimme der Nutzung meiner Daten für die Kontaktaufnahme zu.
 formSubmit: Senden
 ---
 
