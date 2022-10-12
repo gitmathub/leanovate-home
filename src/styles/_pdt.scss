@@ -8,13 +8,15 @@
     line-height: 52px;
     font-family: 'Neuton', serif;
     // color: $color-leanovate-blue-light;
+
+    em {
+      font-family: 'Neuton', serif;
+      white-space: nowrap;
+      color: $color-white;
+    }
   }
 
-  em {
-    font-family: 'Neuton', serif;
-    white-space: nowrap;
-    color: $color-white;
-  }
+
 
   p {
     max-width: 700px;
@@ -22,6 +24,9 @@
     color: rgba(213, 213, 213, 0.887);
     margin-left: 20%;
     text-overflow: no;
+    em {
+      color: orange;
+    }
   }
 
 }
