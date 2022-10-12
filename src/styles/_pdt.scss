@@ -17,7 +17,7 @@
 
   p {
     width: 100%;
-    font-size: larger;
+    font-size: 2.4rem;
     padding-left: 20%;
   }
 
@@ -26,4 +26,16 @@
     max-width: $text-block-width;
   }
 
+  @include respond(small) {
+    p {
+      font-size: $font-size-middle;
+    }
+    h2 {
+      font-size: $font-size-title-small;
+      line-height: $font-size-title-small;
+      em {
+        font-size: $font-size-title-small;
+      }
+    }
+  }
 }
