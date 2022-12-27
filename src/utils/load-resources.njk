@@ -28,11 +28,11 @@
 
 <script>
   (function(){
-    {# const scripts = [
+    scripts = [
     `https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.1/lazysizes.min.js`,
     // `https://www.googletagmanager.com/gtag/js?id=AW-1071340456`,
-    // `${resourcesUrl}/_assets/scripts/google.js`,
-  ] #}
+    `{{ env.resourcesUrl }}/assets/scripts/google.js`,
+  ]
 
     window.loadAfterDocumentReady(() => {
       const s = window.createScriptElement

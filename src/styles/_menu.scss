@@ -1,0 +1,191 @@
+.menu-list {
+  font-family: $font-header;
+  font-weight: $font-weight-light;
+  text-transform: uppercase;
+  z-index: 500;
+
+  // override global "-" dashes
+  ul>li:before {
+    content: '';
+    display: block;
+  }
+  ul>li:last-child {
+    margin-bottom: 0;
+  }  
+}
+
+.menu-bar {
+  display: none;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0;
+    width: 100%;
+  }
+  ul>li>ul>li>a {
+    padding: 0 1rem;
+  }
+
+  ul {
+    margin: 0 0 1.6rem 0;
+  }
+
+  .top-menu>li {
+    display: block;
+    float: left;
+    padding-top: 1.6rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+    @include respond(wide) {
+      padding-left: 0.8rem;
+    }
+  }
+
+  .sub-menu {
+    display: none;
+    position: absolute;
+    min-width: 24.0rem;
+    box-shadow: 0.5rem 0.5rem 1.5rem black;
+  }
+
+  .top-menu>li:hover .sub-menu {
+    background-color: white;
+    display: block;
+    padding: 0.8rem;
+    margin-left: -1.6rem;
+    margin-right: 1.6rem;
+    box-shadow: 0.5rem 0.5rem 1.5rem black;
+    line-height: 250%;
+  }
+
+  .top-menu>li:hover .second-last {
+    margin-left: -12.0rem;
+  }
+
+  .top-menu>li:hover .last {
+    margin-left: -13.0rem;
+    margin-top: -1rem;
+    min-width: 12.0rem;
+  }
+
+  @include respond(pad-to-wide) {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 20.0rem; // logo width
+    margin-right: 1.6rem;
+    font-size: $font-size-middle;
+    font-weight: $font-weight-middle;
+  }
+
+  @include respond(wide) {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 20.0rem; // logo width
+    margin-right: 4.0rem;
+    font-size: $font-size-wide;
+    font-weight: $font-weight-middle;
+  }
+}
+
+.menu-hamburger {
+  display: none;
+  position: relative;
+  width: 0;
+
+  @media only screen and (max-width: $pad-width) {
+    display: block
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked~div.menu-list {
+    transition: opacity 0.8s;
+    width: 100%;
+    opacity: 1;
+    z-index: 100;
+    body {
+      width: 0;
+    }
+  }
+
+  .menu-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    width: 0; // actually hide menu
+    // background-color: green;
+    background-color: $color-grey-light-2;    
+  }
+
+  .top-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: 300px;
+    // margin-left: calc(width - 50%);
+    // margin-top: calc(height - 50%);
+    top: 10%;
+    left: 20%;
+    // transform: translate(-10%, -30%);
+    list-style: none;
+  }
+
+  .sub-menu {
+    margin-left: 1.8rem;
+    display: block;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  a:hover {
+    background-color: white;
+  }
+  a.active {
+    font-weight: 900;
+  }
+
+  &__button {
+    position: fixed;
+    z-index: 1500;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: $color-white;
+    transition: transform 0.8s;
+
+    @include respond(small) {
+      top: 0.8rem;
+      right: 0.4rem;
+    }
+
+    @include respond(middle) {
+      top: 1.8rem;
+      right: 1.8rem;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    top: -0.2rem;
+    left: 0.7rem;
+    z-index: 1700;
+    font-size: 2.8rem;
+  }
+
+  .language-switch {
+    display: block;
+  }
+  
+}
+

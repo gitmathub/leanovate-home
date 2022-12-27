@@ -12,8 +12,9 @@ theme: dark
       </button>
     </a>
   </div>
-  <h1>{{ whitePaperTitle }}</h1>
-  {% partial 'teaser' %}
+  <h1 class="whitepaper__headine">{{ whitePaperTitle }}</h1>
+  <div class="paragraph blue-green max-scaled">{% partial 'paragraph-01' %}</div>
+  <div class="paragraph">{% partial 'paragraph-02' %}</div>
   <img src="{{ teaserImageSrc }}" alt="{{ teaserImageAlt }}" class="main-image">
   {% include './form.njk' %}
 </section>

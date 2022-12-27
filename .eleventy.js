@@ -68,7 +68,7 @@ module.exports = eleventyConfig => {
       input: 'src',
       output: 'dist',
       layouts: 'templates',
-      includes: 'utils',
+      includes: 'utils', // rename utils to includes
       data: 'data',
     },
     passthroughFileCopy: true,

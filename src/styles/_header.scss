@@ -1,0 +1,38 @@
+header {
+  position: relative;
+  background-color: $color-leanovate-blue;
+
+
+  .logo {
+    z-index: 2500;
+    @include respond(small) {
+      position: absolute;
+      width: 10.0rem;
+      top: 0.2rem;
+      left: 0.2rem;
+    }
+
+    @include respond(middle) {
+      // background-color: lightgray;
+      position: absolute;
+      width: 16.0rem;
+      top: 0.8rem;
+      left: 0.4rem;
+    }
+
+    @include respond(wide) {
+      // background-color: green;
+      position: fixed;
+      width: 21.6rem;
+      top: 1.6rem;
+      left: 1.2rem;
+    }
+  }
+  // nav {
+  //   display: block;
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   height: 500px;
+  // }
+}

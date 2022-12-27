@@ -34,15 +34,22 @@ html {
 
   background-color: $color-white;
   color: $color-grey-dark-3;
-  .form-box {
-    background-color: $color-white;
-  }
+
   .mdc-text-field {
     background-color: $color-white;
   }  
   em {
     color: $color-leanovate-blue;
-  }  
+  }
+  .blue-green {
+    // background-color: #2a9a63; // green
+    background-color: #213148; //blue
+    color: $color-white;
+  }
+  .redish {
+    background-color: #753c3d; //wine red
+    color: $color-white;
+  }
 }
 
 html[theme='dark'] {
@@ -54,9 +61,6 @@ html[theme='dark'] {
   }
   h3 {
     color: $color-leanovate-orange;
-  }
-  .form-box {
-    background-color: #ececec;
   }
   .mdc-text-field {
     background-color: $color-white;
@@ -75,9 +79,19 @@ html[theme='dark'] {
   }
   em {
     color: orange;
+  }
+  .blue-green {
+    background-color: #213148; //blue
   }  
 }
 
+.paragraph {
+  padding: 1.6rem 0 1.6rem 2.1rem;
+  margin-bottom: 2.1rem;
+  @include respond(small) {
+    margin-bottom: 1.2rem;
+  }
+} 
 // OVERRIDE WITH DARK SCHEME
 // we can play with that, if we want to support 2 themes
 // this has to come AFTER the default
@@ -93,7 +107,6 @@ body {
   font-weight: $font-weight-light;
   line-height: $line-height-middle;
 }
-
 
 h1,
 h2,
@@ -116,6 +129,7 @@ h1,
   font-size: $font-size-title-middle;
   font-weight: $font-weight-title-middle;
   margin: 3.2rem auto 2.8rem auto;
+  letter-spacing: -1px;
 }
 
 h2,
@@ -190,13 +204,13 @@ h4,
   }
 }
 
-p {
-  margin-bottom: 2.1rem;
+// p {
+//   margin-bottom: 2.1rem;
 
-  @include respond(small) {
-    margin-bottom: 1.2rem;
-  }
-}
+//   @include respond(small) {
+//     margin-bottom: 1.2rem;
+//   }
+// }
 
 // p:last-child {
 //   margin-bottom: 0;
@@ -303,6 +317,7 @@ footer {
   width: 100%;
   // height: 100%;
   overflow: hidden;
+  margin: 1rem;
 }
 
 nav {

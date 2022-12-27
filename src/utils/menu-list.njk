@@ -1,0 +1,18 @@
+<div class="menu-list" style="display: none">
+  <ul class="top-menu">
+    <li>
+      {{ links[locale].portfolio.title }}
+      <ul class="sub-menu">
+        <li>
+          <a href="{{ links[locale].software.path }}">{{ links[locale].software.title }}</a>
+        </li>
+      </ul>
+    </li>
+    {# <li>
+      <img height="30" width="30" src="/assets/flags/{{locale}}.svg" alt="language switch">
+      <ul class="sub-menu last">
+        {% include "lang-switch.njk" %}
+      </ul>
+    </li> #}
+  </ul>
+</div>
