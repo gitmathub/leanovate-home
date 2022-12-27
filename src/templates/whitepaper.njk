@@ -5,15 +5,15 @@ theme: dark
 
 <section class="centered">
   <div class="whitepaper__headline-button">
-    <h2 style="margin:0">{{ whitePaper }}</h2>
+    <h2 style="margin:0;">{{ whitePaper }}</h2>
     <a href="#whitepaper-download" style="text-decoration: none">
       <button type="button" class="mdc-button mdc-button--raised">
         <span class="mdc-button__label">{{ downLoadButton }}</span>
       </button>
     </a>
   </div>
-  <h1 class="whitepaper__headine">{{ whitePaperTitle }}</h1>
-  <div class="paragraph blue-green max-scaled">{% partial 'paragraph-01' %}</div>
+  <h1 class="whitepaper__headine" style="font-size:6rem;">{{ whitePaperTitle }}</h1>
+  <div class="paragraph blue-green">{% partial 'paragraph-01' %}</div>
   <div class="paragraph">{% partial 'paragraph-02' %}</div>
   <img src="{{ teaserImageSrc }}" alt="{{ teaserImageAlt }}" class="main-image">
   {% include './form.njk' %}

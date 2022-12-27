@@ -85,13 +85,6 @@ html[theme='dark'] {
   }  
 }
 
-.paragraph {
-  padding: 1.6rem 0 1.6rem 2.1rem;
-  margin-bottom: 2.1rem;
-  @include respond(small) {
-    margin-bottom: 1.2rem;
-  }
-} 
 // OVERRIDE WITH DARK SCHEME
 // we can play with that, if we want to support 2 themes
 // this has to come AFTER the default
@@ -204,17 +197,6 @@ h4,
   }
 }
 
-// p {
-//   margin-bottom: 2.1rem;
-
-//   @include respond(small) {
-//     margin-bottom: 1.2rem;
-//   }
-// }
-
-// p:last-child {
-//   margin-bottom: 0;
-// }
 
 ul,
 ol {
@@ -253,7 +235,6 @@ a {
     background-color: $color-leanovate-blue;
   }
 }
-
 
 main,
 footer {
@@ -311,6 +292,19 @@ footer {
     margin-top: 2.4rem;
   }
 }
+
+.paragraph {
+  padding: 1.6rem 0 1.6rem 2.1rem;
+  margin-bottom: 2.1rem;
+
+  em {
+    color: $color-leanovate-orange;
+  }
+
+  @include respond(small) {
+    margin-bottom: 1.2rem;
+  }
+} 
 
 .main-image {
   object-fit: cover;

@@ -1,8 +1,15 @@
 .menu-list {
   font-family: $font-header;
-  font-weight: $font-weight-light;
+  // font-weight: $font-weight-light;
   text-transform: uppercase;
+  // color: $color-white;
   z-index: 500;
+
+  display: flex;
+  // justify-content: center;
+  width: 100%;
+  padding: 0.8rem;
+  max-width: $text-block-width;
 
   // override global "-" dashes
   ul>li:before {
@@ -72,20 +79,21 @@
 
   @include respond(pad-to-wide) {
     display: flex;
-    justify-content: flex-end;
-    margin-left: 20.0rem; // logo width
-    margin-right: 1.6rem;
-    font-size: $font-size-middle;
-    font-weight: $font-weight-middle;
+    justify-content: center;
+    // margin-left: 20.0rem; // logo width
+    // margin-right: 1.6rem;
+    // font-size: $font-size-middle;
+    // font-weight: $font-weight-middle;
   }
 
   @include respond(wide) {
     display: flex;
-    justify-content: flex-end;
-    margin-left: 20.0rem; // logo width
-    margin-right: 4.0rem;
-    font-size: $font-size-wide;
-    font-weight: $font-weight-middle;
+    justify-content: center;
+    // align-items: flex-start;
+    // margin-left: 20.0rem; // logo width
+    // margin-right: 4.0rem;
+    // font-size: $font-size-wide;
+    // font-weight: $font-weight-middle;
   }
 }
 
@@ -121,7 +129,7 @@
     opacity: 0;
     width: 0; // actually hide menu
     // background-color: green;
-    background-color: $color-grey-light-2;    
+    background-color: $color-grey-light-2;
   }
 
   .top-menu {

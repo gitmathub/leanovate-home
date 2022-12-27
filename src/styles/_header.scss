@@ -1,38 +1,46 @@
 header {
-  position: relative;
-  background-color: $color-leanovate-blue;
-
-
+  // background-color: #0096d9;
+  color: #0096d9;
   .logo {
     z-index: 2500;
+    
+    
+// FIXME: why configure logo height? simplify!
     @include respond(small) {
-      position: absolute;
+      // position: absolute;
       width: 10.0rem;
-      top: 0.2rem;
-      left: 0.2rem;
+      height: 21.6%;
+      // top: 0.2rem;
+      // left: 0.2rem;
     }
 
     @include respond(middle) {
       // background-color: lightgray;
-      position: absolute;
+      // position: absolute;
       width: 16.0rem;
-      top: 0.8rem;
-      left: 0.4rem;
+      height: 74%;
+      // top: 0.8rem;
+      // left: 0.4rem;
     }
 
     @include respond(wide) {
       // background-color: green;
-      position: fixed;
+      // position: relative;
       width: 21.6rem;
-      top: 1.6rem;
-      left: 1.2rem;
+      height: 74%;
+      padding-right: 5rem;
+      // top: 10.6rem;
+      // left: 1.2rem;
     }
   }
-  // nav {
-  //   display: block;
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   height: 500px;
-  // }
+  nav {
+    // display: block;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    height: 6.8rem;
+    // margin: 3.6rem;
+    // margin-top: 0;
+    // padding: 0.8rem;    
+  }
 }
