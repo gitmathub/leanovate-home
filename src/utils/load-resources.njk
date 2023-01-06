@@ -32,12 +32,13 @@
     `https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.1/lazysizes.min.js`,
     // `https://www.googletagmanager.com/gtag/js?id=AW-1071340456`,
     `{{ env.resourcesUrl }}/assets/scripts/google.js`,
+    `{{ env.resourcesUrl }}/assets/scripts/google.js`,
   ]
 
     window.loadAfterDocumentReady(() => {
       const s = window.createScriptElement
-
       s(['{{ env.resourcesUrl }}/assets/scripts/lazyScripts.js'], e => e.type = "module")
+      s(['{{ env.resourcesUrl }}/assets/scripts/criticalScripts.js'], e => e.type = "module")
     })
   })()
 </script>
