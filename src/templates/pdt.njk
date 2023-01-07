@@ -3,17 +3,34 @@ layout: main.njk
 theme: dark
 ---
 
-  <section class="pdt centered" id="what-we-do">
-    {% partial '01-start' %}
+  <section class="centered" id="what-we-do">
+      {% partial '01-headline' %}
     <img src='/images/full-stack-agilist.jpg' class='main-image'>
-    {% partial '03-what-we-do' %}
-    {% partial '04-team' %}
+    {# <div class="paragraph">
+      {% partial '02-start' %}
+    </div>     #}
+    <div class="paragraph">
+      {% partial '02-start' %}
+      {% partial '03-what-we-do' %}
+    </div>
+    <div class="paragraph">
+      {% partial '04-team' %}
+    </div>
+    <div class="paragraph blue-green">  
+      {% partial '05-tech-dna' %}
+    </div>
     <img src='/images/nice-code.jpg' class='main-image'>
-    {% partial '05-tech-dna' %}
-    {% partial '07-focus-area' %}
-    {% partial '06-costs' %}
+    <div class="paragraph">
+      {% partial '07-focus-area' %}
+    </div>
+    <div class="paragraph redish">
+      {% partial '08-tech' %}
+    </div>
+    <div class="paragraph">
+      {% partial '06-costs' %}
+    </div>
     <img src='/images/reality-eats.jpg' class='main-image'>
-    {% partial '08-tech' %}
+
     {% partial '09-holistic' %}
     {% partial '10-finish' %}
   </section>

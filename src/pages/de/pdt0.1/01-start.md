@@ -1,7 +1,7 @@
 ---
-tags: pdt
+tags: pdt0.1
 ---
 
-## Product Development Team
+# Product Development Team
 
 ### „Leanovate ist unbequem und angenehm erfolgsführend!“

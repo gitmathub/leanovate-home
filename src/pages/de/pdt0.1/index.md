@@ -1,7 +1,7 @@
 ---
-permalink: /de/product-development-team/index.html
-layout: pdt.njk
-tags: pdt
+permalink: /de/produkt-entwicklung-team/index.html
+layout: pdt0.1.njk
+tags: pdt0.1
 
 # max 35 characters
 title: "Produkt-Entwicklung-Team"
