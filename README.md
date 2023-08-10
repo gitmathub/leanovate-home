@@ -1,16 +1,15 @@
 # Leanovate Web
 
-This is a test baloon for evaluating 11ty as sitegenerator for landing pages.
+This project serves as both an experiment and a showcase how to create landing pages using the [11ty site generator](https://www.11ty.dev/). From a technical perspective, particularly in terms of [web vitals](https://web.dev/vitals/) and related factors, this page excels and offers exceptional potential for optimizing SEO performance.
 
-- [Leanovate Web](#leanovate-web)
-  - [Dev](#dev)
-    - [Installation](#installation)
-    - [Material](#material)
-    - [Material](#material-1)
-    - [Todos](#todos)
+In the end this approach wasn't convincing the stakeholders, because the text maintenance via Gitlab (`/src/pages`) was too geeky.
 
+## Screenshot
+
+![Alt text](screenshot-11ty.png)
 
 ## Dev
+
 ### Installation
 
 Follow the [getting started](https://www.11ty.dev/docs/getting-started/) instructions.
@@ -20,13 +19,14 @@ Follow the [getting started](https://www.11ty.dev/docs/getting-started/) instruc
 The form fields are made with Material web components.
 
 Pro
-  - look and feel as Google and Android users know it
-  - animations make is more "fancy"
-Con
-  - overriding styles is difficult
-  - bigger footprint (loading)
-  - external dependencies
-  - look and feel constrained (can be a pro, see above)
+
+- look and feel as Google and Android users know it
+- animations make is more "fancy"
+  Con
+- overriding styles is difficult
+- bigger footprint (loading)
+- external dependencies
+- look and feel constrained (can be a pro, see above)
 
 ### Material
 
@@ -37,18 +37,17 @@ Con
 
 ### Todos
 
-
-[x] Finish form: Material button
-[x] Create Answering Page
-[ ] Fix cookie clicks
-[x] Validate form
-[ ] Send asynchronly
-[ ] Handle errors while sending
-[ ] Create footer
-[ ] Create header
-[ ] Create menu
-[ ] Fix responsive image loading
-[ ] Create Fav Logo (incl. manifest.json)
-[ ] Translate to English
-[X] Connect form to backend
-[ ] Make confirmation and download page generic
+- [x] Finish form: Material button
+- [x] Create Answering Page
+- [ ] Fix cookie clicks
+- [x] Validate form
+- [ ] Send asynchronly
+- [ ] Handle errors while sending
+- [ ] Create footer
+- [ ] Create header
+- [ ] Create menu
+- [ ] Fix responsive image loading
+- [ ] Create Fav Logo (incl. manifest.json)
+- [ ] Translate to English
+- [x] Connect form to backend
+- [ ] Make confirmation and download page generic
